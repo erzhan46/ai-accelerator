@@ -74,10 +74,6 @@ spec:
               name: custom-workbench
             - mountPath: /dev/shm
               name: shm
-            - mountPath: /etc/pki/tls/custom-certs/ca-bundle.crt
-              name: trusted-ca
-              readOnly: true
-              subPath: ca-bundle.crt
           workingDir: /opt/app-root/src
       enableServiceLinks: false
       serviceAccountName: custom-workbench
@@ -88,11 +84,4 @@ spec:
         - emptyDir:
             medium: Memory
           name: shm
-        - configMap:
-            items:
-              - key: ca-bundle.crt
-                path: ca-bundle.crt
-            name: workbench-trusted-ca-bundle
-            optional: true
-          name: trusted-ca
 
