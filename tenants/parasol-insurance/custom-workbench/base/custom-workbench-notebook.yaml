@@ -95,3 +95,4 @@ spec:
             name: workbench-trusted-ca-bundle
             optional: true
           name: trusted-ca
+
