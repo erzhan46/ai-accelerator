@@ -75,6 +75,9 @@ spec:
             - mountPath: /dev/shm
               name: shm
           workingDir: /opt/app-root/src
+          envFrom:
+            - secretRef:
+                name: minio-data-connection
       enableServiceLinks: false
       serviceAccountName: standard-workbench
       volumes:
