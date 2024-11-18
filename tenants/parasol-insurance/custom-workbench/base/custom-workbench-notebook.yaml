@@ -93,7 +93,7 @@ spec:
             items:
               - key: ca-bundle.crt
                 path: ca-bundle.crt
-            name: workbench-trusted-cabundle
+            name: workbench-trusted-ca-bundle
             optional: true
           name: trusted-ca
 
