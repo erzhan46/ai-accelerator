@@ -64,6 +64,8 @@ spec:
               value: /etc/pki/tls/custom-certs/ca-bundle.crt
             - name: PIPELINES_SSL_SA_CERTS
               value: /etc/pki/tls/custom-certs/ca-bundle.crt
+            - name: GIT_SSL_CAINFO	
+              value: /etc/pki/tls/custom-certs/ca-bundle.crt
           ports:
             - containerPort: 8888
               name: notebook-port
@@ -95,6 +97,6 @@ spec:
             items:
               - key: ca-bundle.crt
                 path: ca-bundle.crt
-            name: config-trusted-cabundle
+            name: workbench-trusted-ca-bundle
             optional: true
           name: trusted-ca
