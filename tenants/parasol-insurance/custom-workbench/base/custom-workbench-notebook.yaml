@@ -9,6 +9,7 @@ metadata:
     openshift.io/description: ''
     openshift.io/display-name: custom-workbench
     notebooks.opendatahub.io/last-image-selection: 'custom-notebook:latest'
+    argocd.argoproj.io/sync-options: ServerSideApply=true
   name: custom-workbench
   namespace: parasol-insurance
 spec:
@@ -92,7 +93,7 @@ spec:
             items:
               - key: ca-bundle.crt
                 path: ca-bundle.crt
-            name: config-trusted-cabundle
+            name: workbench-trusted-cabundle
             optional: true
           name: trusted-ca
 
