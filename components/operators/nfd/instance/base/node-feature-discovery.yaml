@@ -8,6 +8,7 @@ spec:
   operand:
     imagePullPolicy: IfNotPresent
     servicePort: 12000
+    image: registry.redhat.io/openshift4/ose-node-feature-discovery-rhel9:v4.16
   prunerOnDelete: false
   topologyUpdater: false
   workerConfig:
